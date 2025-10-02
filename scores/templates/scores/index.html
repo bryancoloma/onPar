@@ -5,22 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>onPar Golf App</title>
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
     <div id="main-content">
         <h1>onPar Scoring</h1>
         <label for="teamName">Input Team Name:</label>
-        <input  type="teamName">
+        <input type="text" id="teamName" placeholder="Team Name">
         <div id="players-section">
             <h2>Players</h2>
-            <form id="players-form">
+            <form id="players-form" onsubmit="return false;">
                 <div id="player-inputs">
-                    <!-- Player input fields will appear here -->
+                    <input type="text" id="player-input" placeholder="Enter player name" />
                 </div>
                 <button type="button" id="add-player-btn">Add Player</button>
+                <button type="button" id="complete-btn">Complete</button>
             </form>
+            <h3>Current Players:</h3>
+            <ul id="player-list"></ul>
         </div>
     </div>
-        <script src="/static/js/script.js"></script>
+    <script src="/static/js/script.js"></script>
 </body>
 </html>
